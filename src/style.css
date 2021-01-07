@@ -5,30 +5,96 @@
 }
 html{
     font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif; /*cambiar por roboto*/
+    font-family: 'Open Sans', sans-serif;
 }
 body{
     min-height: 100vh;
     background-color: #150019;
 }
+a {
+    text-decoration: none;
+}
+.contenedor{
+    width: 90%;
+    max-width: 80rem;
+    margin: auto;
+}
 /*HEADER*/
 header{
-    background-color: blueviolet;
-}
-header .image-orq img{
+    position: sticky;
+    top: 0;
+    background-color: #d5c3aa;
     width: 100%;
+    z-index: 1000;
+    height: 14rem;
+}
+header .logo{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.01rem;
+    text-align: center;
+}
+header nav{
+    background-color:#d5c3aa;
+    padding: 1rem 4rem 1rem 7rem;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    padding: 0 10rem;
+}
+header nav .nav-items{
+    display: flex;
+    flex: 1;
+    list-style: none;
+    padding: 0 0 0 4rem;
+}
+header nav .nav-items li{
+    padding: 0 1.5rem;
+}
+header nav .nav-items li a{
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+header nav .nav-items li a:hover{
+    color: #867666;
+}
+header nav .nav-items input{
+    display: flex;
+    height: 4rem;
+    background: #f8f4ee;
+    min-width: 18%!important;
+    border: 0.01rem solid rgba(155, 155, 155, 0.2);
     height: 100%;
-    object-fit: cover;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+}
+header nav .nav-items select{
+    display: flex;
+    height: 4rem;
+    background: #f8f4ee;
+    min-width: 18%!important;
+    border: 0.01rem solid rgba(155, 155, 155, 0.2);
+    height: 100%;
+    width: 50%;
+    border-radius: 1rem;
+}
+header nav .nav-items label{
+    color: #867666;
+    font-size: 1.8rem;
+    text-decoration: none;
 }
 /*-------------------------NAVEGADOR-------------------------*/
 .navigation {
     position: fixed;
     width: 6rem;
     height: 100%;
-    background-color: #3e0748;
+    background-color: #867666;
     transition: 0.5s;
     overflow: hidden;
 }
@@ -38,7 +104,7 @@ header .image-orq img{
 }
 .navigation ul{
     position: absolute;
-    top: 0;
+    top: 20rem;
     left: 0;
     width: 100%;
 }
@@ -48,7 +114,7 @@ header .image-orq img{
     list-style: none;
 }
 .navigation ul li:hover{
-    background: yellowgreen;
+    background: #e1b80d;
 }
 .navigation ul li a{
     position: relative;
@@ -63,7 +129,7 @@ header .image-orq img{
     display: block;
     min-width: 6rem;
     height: 6rem;
-    font-size: 2rem;
+    font-size: 4rem;
     line-height: 6rem;
     text-align: center;
 }
@@ -80,67 +146,14 @@ header .image-orq img{
     text-align: start;
     white-space: nowrap;
 }
-/*-----------------------TOGGLE---------------------------*/
-.toggle{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 6rem;
-    height: 6rem;
-    background: #330748;
-}
-.toggle.active{
-    background:yellowgreen;
-}
-.toggle:before{
-    content:'\f0c9';
-    font-family: fontAwesome;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 6rem;
-    text-align: center;
-    font-size: 2.4rem;
-    color: #fff;
-}
-.toggle.active:before{
-    content:\f12c; /*CAMBIAR ESTO POR UNA X*/
-}
-
 /*MAIN*/
 main{
-    background-color: burlywood;
+    background-color: #eae2d6;
 }
-section{
-    background-color: darkorange;
+.grid .item div{
+    display: inline-grid;
+    position: inherit
 }
-/*--------------GALERIA----------------------------*/
-.galery-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.galery-container .galery{
-    width: 15rem;
-    height: 20rem;
-    margin: 2rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0 .5);
-    overflow: hidden;
-    border-radius: 1rem;
-}
-.galery-container .galery img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-.galery-container .galery img:hover{
-    transition: .2s linear;
-    scale: 1.3;
-}
-
 /*FOOTER*/
 footer{
     background-color: darkblue;

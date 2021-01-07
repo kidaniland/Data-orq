@@ -1,9 +1,9 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterClave, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filtro de instrumentos por clave', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterClave).toBe('function');
   });
 
   it('returns `example`', () => {

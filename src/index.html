@@ -4,114 +4,136 @@
     <meta charset="utf-8">
     <title>Data Orchestra</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/3587d7a3ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="iconOrq-v1.0/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
   </head>
   <body>
-    <!-------------------------NAVEGADOR-------------------------------->
+    <header>
+      <div class="logo">Orquesta Sinfónica</div>
+      <!-----------------------BARRA DE FILTROS----------------------------------->
+      <nav class="barra"> 
+        <div class="nav-items">
+         <li>
+            <label for="clave">Instrumentos por clave</label>
+            <select name="clave" id="clave">
+              <option value="sol">Sol</option>
+              <option value="sol">Do</option>
+              <option value="sol">Fa</option>
+            </select>
+          </li>
+          <li>
+            <label for="nombre-instrumentos">Instrumentos</label>
+            <!--<select id="datalistInstument"></select>-->
+            <input name="nombre-instrumentos" id="nombre-instrumentos" list="instrumentos">
+            <datalist id="datalistInstument" class="datalist">
+              <option value="Violin">
+              <option value="Viola">
+              <option value="Violonchelo">
+              <option value="Contrabajo">
+              <option value="Flauta">
+              <option value="Flautín">
+              <option value="Oboe">
+              <option value="Corno Inglés">
+              <option value="Clarinete">
+              <option value="Fagot">
+              <option value="Trompeta">
+              <option value="Trombón">
+              <option value="Corno Frances">
+              <option value="Tuba">
+              <option value="Timbal">
+              <option value="Patillos">
+              <option value="Bombo">
+              <option value="Triángulo">
+              <option value="Marimba">
+              <option value="Gong">
+              <option value="Caja">
+              <option value="Director">
+              <option value="Arpa">
+              <option value="Piano">
+            </datalist>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="iconOrqcasa-silueta-negra-sin-puerta"></i></span>
+              <span class="title" id="home">Home</span>
+            </a>
+          </li>
+        </div>
+      </nav>
+    </header>
+    <!-------------------------NAVEGADOR LATERAL-------------------------------->
     <div class="navigation">
       <ul>
         <li>
-          <a href="#">
-            <span class="icon"><i class="fas fa-drum"></i></span>
-            <span class="title">Cuerdas</span>
+          <a href="#" class="activo">
+            <span class="icon"><i class="fas fa-music"></i></span>
+            <span class="title" id="todos">Todos</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="icon"><i class="fas fa-drum"></i></span>
-            <span class="title">Viento Madera</span>
+            <span class="icon"><i class="iconOrqviolin"></i></span>
+            <span class="title" id="cuerdas">Cuerdas</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="icon"><i class="fas fa-drum"></i></span>
-            <span class="title">Viento Metal</span>
+            <span class="icon"><i class="iconOrqclarinet"></i></span>
+            <span class="title" id="vientoMad">Viento Madera</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="icon"><i class="fas fa-drum"></i></span>
-            <span class="title">Percusión</span>
+            <span class="icon"><i class="iconOrqtrumpet"></i></span>
+            <span class="title" id="vientoMet">Viento Metal</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="icon"><i class="fas fa-drum"></i></span>
-            <span class="title">Solista</span>
+            <span class="icon"><i class="iconOrqtambor"></i></span>
+            <span class="title" id="percusion">Percusión</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="iconOrqpiano-de-cola"></i></span>
+            <span class="title" id="solista">Solista</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="toggle" onclick=" toggleMenu()"></div>
-    <!-------------------------MAIN-------------------------------------->
-    <header>
-      <div class="image-orq">
-        <img src="./image/orquesta.jpg" alt="orquesta">
-      </div>
-    </header>
-    <main>
-      <section class="galery-container">
-        <div class="galery" id="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
-        </div>
-        <div class="galery">
-          <img src="./image/cuerda/contrabajo.png" alt="contrabajo">
-          <figcaption>contrabajo</figcaption>
+    <!-------------------------MAIN--------------------------------------------->
+    <main class="contenedores">
+      <!--PAGINA PRINCIPAL GRID DE ITEMS-->
+      <section class="grid" id="grid">
+        <div id="item" class="item">
+          <!--las imagenes mini y nombres vienen desde la data-->
         </div>
       </section>
-      <!---CATEGORIA CUERDAS-->
-      <section class="category-cuerda">
-
+      <!--FICHA DEL INSTRUMENTO-->
+      <section class="overlay">
+        <a href="#" id="btn-popup" class="btn-popup"><i class="fas fa-times"></i></a>
+        <div id="instrumento" class="ficha-popup">
+          <img src="" alt="" id="imgInstrument" class="imgInstrument">
+          <audio src="" id="audioInstruemnt" class="audioInstruemnt"></audio>
+          <img src="" alt="" id="positionInstrument" class="positionInstrument">
+        </div>
+        <div id= "dataInstrument">
+          <h1 id="titleInstument" class="title"></h1>
+          <p class="textP">
+          Clave: <span id="clave" class="text"></span></br>
+          Familia: <span id="familia" class="text"></span></br>
+          <p id="utiliza" class="textP"></p>
+          Dato: <span id="dato" class="text"></span>
+          </p>
+        </div>
       </section>
     </main>
+    <!--FOOOTER
     <footer>
       <p>Espacio reservado para el footer</p>
-      <div class="image-orq">
-        <img src="./image/notas.png" alt="orquesta">
-      </div>
-    </footer>
-    <div id="root"></div>
+    </footer>-->
     <script src="main.js" type="module"></script>
   </body>
 </html>
