@@ -29,6 +29,7 @@ header{
     height: 14rem;
 }
 header .logo{
+    background-color: #867666;
     color: #fff;
     font-size: 3rem;
     font-weight: 600;
@@ -104,7 +105,7 @@ header nav .nav-items label{
 }
 .navigation ul{
     position: absolute;
-    top: 20rem;
+    top: 10rem;
     left: 0;
     width: 100%;
 }
@@ -150,9 +151,21 @@ header nav .nav-items label{
 main{
     background-color: #eae2d6;
 }
-.grid .item div{
+.contenedores .gird{
+    background-color: #e1b80d;
+}
+.grid .item .div-galery{
     display: inline-grid;
-    position: inherit
+    position: inherit;
+    padding: 2rem;
+}
+.grid .item .div-galery .image-mini{
+    border-radius: 2rem;
+    width: 150px;
+    height: 150px;
+}
+.grid .item .div-galery .image-mini:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
 /*FOOTER*/
 footer{

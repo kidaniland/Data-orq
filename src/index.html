@@ -17,41 +17,14 @@
          <li>
             <label for="clave">Instrumentos por clave</label>
             <select name="clave" id="clave">
-              <option value="sol">Sol</option>
-              <option value="sol">Do</option>
-              <option value="sol">Fa</option>
+              <!--las clves vienen desde js por el array-->
             </select>
           </li>
           <li>
             <label for="nombre-instrumentos">Instrumentos</label>
-            <!--<select id="datalistInstument"></select>-->
-            <input name="nombre-instrumentos" id="nombre-instrumentos" list="instrumentos">
-            <datalist id="datalistInstument" class="datalist">
-              <option value="Violin">
-              <option value="Viola">
-              <option value="Violonchelo">
-              <option value="Contrabajo">
-              <option value="Flauta">
-              <option value="Flautín">
-              <option value="Oboe">
-              <option value="Corno Inglés">
-              <option value="Clarinete">
-              <option value="Fagot">
-              <option value="Trompeta">
-              <option value="Trombón">
-              <option value="Corno Frances">
-              <option value="Tuba">
-              <option value="Timbal">
-              <option value="Patillos">
-              <option value="Bombo">
-              <option value="Triángulo">
-              <option value="Marimba">
-              <option value="Gong">
-              <option value="Caja">
-              <option value="Director">
-              <option value="Arpa">
-              <option value="Piano">
-            </datalist>
+            <select id="listInstument">
+              <!--rellenado desde Js-->
+            </select>
           </li>
           <li>
             <a href="#">
@@ -65,40 +38,40 @@
     <!-------------------------NAVEGADOR LATERAL-------------------------------->
     <div class="navigation">
       <ul>
-        <li>
+        <li id="todos">
           <a href="#" class="activo">
             <span class="icon"><i class="fas fa-music"></i></span>
-            <span class="title" id="todos">Todos</span>
+            <span class="title">Todos</span>
           </a>
         </li>
-        <li>
+        <li id="cuerdas">
           <a href="#">
             <span class="icon"><i class="iconOrqviolin"></i></span>
-            <span class="title" id="cuerdas">Cuerdas</span>
+            <span class="title">Cuerdas</span>
           </a>
         </li>
-        <li>
+        <li id="vientoMad">
           <a href="#">
             <span class="icon"><i class="iconOrqclarinet"></i></span>
-            <span class="title" id="vientoMad">Viento Madera</span>
+            <span class="title" >Viento Madera</span>
           </a>
         </li>
-        <li>
+        <li id="vientoMet">
           <a href="#">
             <span class="icon"><i class="iconOrqtrumpet"></i></span>
-            <span class="title" id="vientoMet">Viento Metal</span>
+            <span class="title">Viento Metal</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="percusion">
             <span class="icon"><i class="iconOrqtambor"></i></span>
-            <span class="title" id="percusion">Percusión</span>
+            <span class="title">Percusión</span>
           </a>
         </li>
-        <li>
+        <li id="solista">
           <a href="#">
             <span class="icon"><i class="iconOrqpiano-de-cola"></i></span>
-            <span class="title" id="solista">Solista</span>
+            <span class="title">Solista</span>
           </a>
         </li>
       </ul>
@@ -109,6 +82,13 @@
       <section class="grid" id="grid">
         <div id="item" class="item">
           <!--las imagenes mini y nombres vienen desde la data-->
+        </div>
+      </section>
+      <!--PAGINA PARA SELECCION POR CLAVES-->
+      <section class="porClaves" id="porClaves">
+        <p id='instPorClave'></p></br>
+        <div id="itemClave" class="itemClave">
+          <!--El contenido viene desde JS y el evento oncchange-->
         </div>
       </section>
       <!--FICHA DEL INSTRUMENTO-->
