@@ -4,7 +4,7 @@ export default {
     "nombre": "Violín",
     "nombre_dos":"Violino",
     "clave": "sol",
-    "familia": "cuerda",
+    "familia": "cuerdas",
     "cuerdas": "sol, re, la, mi",
     "dato": "Instrumento musical de cuerda de unos 60 cm de largo (mástil incluido) formado por una caja de madera hueca y alargada, con un estrechamiento en la parte media y con dos aberturas acústicas en forma de f en el centro, y un brazo (mástil) corto y sin trastes, a lo largo del cual se prolongan cuatro cuerdas y en cuyo extremo se sitúan las clavijas, que permiten afinar el instrumento; se toca colocándola entre el hombro y el mentón y frotando las cuerdas con un arco.",
     "relacionado": "Viola, Violonchello, Contrabajo",

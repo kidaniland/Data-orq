@@ -25,29 +25,26 @@ export const filterClave = (clv) => {
 export const filterFamily = (str) => {
   let family;
   if(str === "cuerdas"){
-    family = orchestra.filter(x => x.famila === 'cuerdas');
+    family = orchestra.filter(x => x.familia === 'cuerdas');
   }
   else if(str === "vientos madera"){
-    family = orchestra.filter(x => x.famila === 'vientos madera');
+    family = orchestra.filter(x => x.familia === 'vientos madera');
   }
   else if(str === "vientos metal"){
-    family = orchestra.filter(x => x.famila === 'vientos metal');
+    family = orchestra.filter(x => x.familia === 'vientos metal');
   }
   else if(str === "percusion"){
-    family = orchestra.filter(x => x.famila === 'percusion');
+    family = orchestra.filter(x => x.familia === 'percusion');
   }
   else{
-    family = orchestra.filter(x => x.famila === 'solista');
+    family = orchestra.filter(x => x.familia === 'solista');
   }
   return family
-}
+};
 
 //Datos por instrumentos
 export const selectInstrument = (instrument) => {
-  let findInstrument;
-  let nameInstrument = orquesta.nombre;
-  if(instrument === nameInstrument){
-    findInstrument = orquesta.find(x => x.nombre)
-  }
-  return findInstrument;
+  const findInstrument = orchestra.find(x => x.nombre === instrument);
+  return findInstrument
 };
+

@@ -1,6 +1,62 @@
 import { filterClave, filterFamily, selectInstrument  } from './data.js';
 import data from './data/orquesta/orquesta.js';
 
+//INSERTAR DATOS A LA GRID O GALERY DE SELECCIONES (CLAVE, FAMILIA)
+function printSelect(arr){
+    for (const item of arr){
+        //div
+        const divElement = document.createElement('div');
+        divElement.setAttribute('class', 'div-galery');
+        //img
+        const imgElement = document.createElement('img');
+        imgElement.setAttribute('class', 'image-mini');
+        imgElement.setAttribute('src', item.miniatura);
+        
+        //h2
+        const nameElement = document.createElement('h2');
+        nameElement.setAttribute('class', 'name-galery');
+        nameElement.textContent = item.nombre;
+        
+        divElement.appendChild(imgElement);
+        divElement.appendChild(nameElement);  
+        galeryDiv.appendChild(divElement);
+
+        imgElement.addEventListener('click', function(){
+            if(item.miniatura === item.img){
+                console.log('EL INSTRUMENTO ES ',item.nombre);
+                
+            }
+        })
+    }
+}
+
+//INSERTAR DATOS EN LA FICHA POR INSTRUMENTOS
+
+function printFicha(obj){
+
+    if(obj === orchestra.num){ //OJO debo recibir el string de un numero
+        //div de la derecha
+        cardImg.innerHTML = orchestra.img;
+        cardAudio.innerHTML = orchestra.sonido;
+        cardPositionImg.innerHTML = orchestra.posicion;
+
+        //div de la izquierda
+        cardTitle.textContent= orchestra.nombre;
+        if(orchestra == orchestra.nombre_dos){
+            cardSecondTitle.textContent = orchestra.nombre_dos;
+        }
+        cardClave.textContent = orchestra.clave;
+        cardFamily.textContent = orchestra.familia;
+        cardData.textContent= orchestra.dato;
+        if(orchestra.num < "05"){
+            cardCharacteristic.innerHTML = "Cuerdas: " + orchestra.cuerdas;
+        }
+        else if(orchestra.num < "11" && orchestra.num > "04"){
+            cardCharacteristic.innerHTML = "Boquilla tipo: " + orchestra.boquilla;
+        }
+    }
+}
+
 
 //ARRAY CON DATOS
 let orchestra = data.orquesta;
@@ -12,12 +68,12 @@ const listInstrument = document.getElementById('listInstument');
 const hrefHome = document.getElementById('home');
 
 //ELEMENTOS BARRA LATERAL
-const hrefTodos = document.getElementById('todos');
-const hrefCuerda = document.getElementById('cuerda');
-const hrefVientoMad = document.getElementById('vientoMad');
-const hrefVientoMet = document.getElementById('vientoMet');
-const hrefPercusion = document.getElementById('percusion');
-const hrefSolista = document.getElementById('solista');
+const familyAll = document.getElementById('todos');
+const familyCuerda = document.getElementById('cuerdas');
+const familyentoMad = document.getElementById('vientoMad');
+const familyVientoMet = document.getElementById('vientoMet');
+const familyPercusion = document.getElementById('percusion');
+const familySolista = document.getElementById('solista');
 
 //ELEMENTOS GRIDS O GALERIA DE INICIO
 const galeryDiv = document.getElementById('item');
@@ -28,6 +84,7 @@ const cardImg = document.getElementById('imgInstrument');
 const cardAudio = document.getElementById('audioInstruemnt');
 const cardPositionImg = document.getElementById('positionInstrument');
 const cardTitle = document.getElementById('titleInstument');
+const cardSecondTitle = document.getElementById('sTitle');
 const cardClave = document.getElementById('clave');
 const cardFamily = document.getElementById('familia');
 const cardCharacteristic = document.getElementById('utiliza');
@@ -36,12 +93,11 @@ const cardData= document.getElementById('dato');
 //INSERTAR DATOS A SELEC POR CLAVE
 let fragment = document.createDocumentFragment();
 let claves = ['Sol', 'Do', 'Fa', 'n/a'];
-let selectClef;
+
 for (const clave of claves){
     let selectC = document.createElement('option');
     selectC.setAttribute('value', clave.toLowerCase());
     selectC.textContent = clave;
-    selectClef += selectC.value; 
     fragment.appendChild(selectC);
 }
 selectClave.appendChild(fragment);
@@ -68,59 +124,49 @@ for (let instrument of allInstrument){
 }
 listInstrument.appendChild(fragmentD);
 
-/*/EVENTO SELECCION POR INSTRUMENTO
+//EVENTO SELECCION POR INSTRUMENTO
 listInstrument.addEventListener('change', function(){
     console.log("Valor--->>", listInstrument.value)
     let instrument = listInstrument.value;
-    console.log("TIPO-->>", typeof clef);
-    selectInstrument(instrument); 
-})*/
+    console.log("TIPO-->>", typeof instrument);
+    //let selectInst = selectInstrument(instrument); 
+})
 
 //EVENTOS POR FAMILIA DE INSTRUMENTO -NAV LATERAL
-hrefTodos.addEventListener('click', function(){
-    console.log("seleccionó TODOS");
+familyAll.addEventListener('click', function(){
+    console.log("Selecciona TODOS");
+    printSelect(orchestra);
 });
-hrefCuerda.addEventListener('click', function(){
-    console.log("seleccionó CUERDAS");
+familyCuerda.addEventListener('click', function(){
+    console.log("Selecciona CUERDAS");
+    const instrCuerdas = "cuerdas";
+    const cuerdas = filterClave(instrCuerdas);
+    printSelect(cuerdas);
+    console.log("RETORNA LA FUNCION-->>", printSelect(cuerdas));
 });
-hrefVientoMad.addEventListener('click', function(){
-    console.log("seleccionó VIENTO MAD");
+familyentoMad.addEventListener('click', function(){
+    console.log("Selecciona VIENTO MAD");
+    const instrVientoMad = "vientos madera";
+    const vientoMad = filterFamily(instrVientoMad);
+    printSelect(vientoMad);
 });
-hrefVientoMet.addEventListener('click', function(){
-    console.log("seleccionó VIENTO MET");
+familyVientoMet.addEventListener('click', function(){
+    console.log("Selecciona VIENDO MET");
+    const instrVientoMet = "vientos metal";
+    const vientoMet = filterFamily(instrVientoMet);
+    printSelect(vientoMet);
 });
-hrefPercusion.addEventListener('click', function(){
-    console.log("seleccionó PERCUSION");
+familyPercusion.addEventListener('click', function(){
+    console.log("Selecciona PERCUSION");
+    const instrPercusion = "percusion";
+    const percusion = filterFamily(instrPercusion);
+    printSelect(percusion);
 });
-hrefSolista.addEventListener('click', function(){
-    console.log("seleccionó SOLISTA");
+familySolista.addEventListener('click', function(){
+    console.log("Selecciona SOLISTA");
+    const instrSolista = "solista";
+    const solista = filterFamily(instrSolista);
+    printSelect(solista);
 });
 
-//INSERTAR DATOS A LA GRID O GALERY
-function printSelect(arr){
-    for (const item of arr){
-        //div
-        const divElement = document.createElement('div');
-        divElement.setAttribute('class', 'div-galery');
-        //img
-        const imgElement = document.createElement('img');
-        imgElement.setAttribute('class', 'image-mini');
-        imgElement.setAttribute('src', item.miniatura);
-        
-        //h2
-        const nameElement = document.createElement('h2');
-        nameElement.setAttribute('class', 'name-galery');
-        nameElement.textContent = item.nombre;
-        
-        divElement.appendChild(imgElement);
-        divElement.appendChild(nameElement);  
-        galeryDiv.appendChild(divElement);
 
-        imgElement.addEventListener('click', function(){
-            if(item.miniatura === item.img){
-                console.log('EL INSTRUMENTO ES ',item.nombre);
-            }
-        })
-    };
-}
-//printX();
