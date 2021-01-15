@@ -23,8 +23,14 @@ function printSelect(arr){
 
         imgElement.addEventListener('click', function(){
             if(item.miniatura === item.img){
+                galeryDiv.style.display = "none";
+                selectModal.style.display = "block";
                 console.log('EL INSTRUMENTO ES ',item.nombre);
-                
+                let instrument = item.nombre;
+                console.log("ELNOMBRE es--->", instrument, " TYPEOF>>", typeof instrument);
+                let cardIntrument = selectInstrument(instrument);
+                console.log("EL RETORNO ES-->>", cardIntrument);
+                //printFicha(cardIntrument);
             }
         })
     }
@@ -34,7 +40,7 @@ function printSelect(arr){
 
 function printFicha(obj){
 
-    if(obj === orchestra.num){ //OJO debo recibir el string de un numero
+    if(obj === orchestra.nombre){
         //div de la derecha
         cardImg.innerHTML = orchestra.img;
         cardAudio.innerHTML = orchestra.sonido;
@@ -77,9 +83,12 @@ const familySolista = document.getElementById('solista');
 
 //ELEMENTOS GRIDS O GALERIA DE INICIO
 const galeryDiv = document.getElementById('item');
+galeryDiv.style.display = "none";
 const galeryClave = document.getElementById('itemClave');
 
 //ELEMENTOS DE FICHA O MODAL
+const selectModal = document.getElementById('modalInstrument');
+selectModal.style.display = "none";
 const cardImg = document.getElementById('imgInstrument');
 const cardAudio = document.getElementById('audioInstruemnt');
 const cardPositionImg = document.getElementById('positionInstrument');
@@ -104,7 +113,6 @@ selectClave.appendChild(fragment);
 
 //EVENTO SELECCION POR CLAVE
 selectClave.addEventListener('change', function(){
-    console.log("EVENTOOOOO--->>", selectClave.value)
     let clef = selectClave.value;
     document.getElementById('instPorClave').innerHTML = "Instrumentos que pueden leer en clave de: "+clef;
     console.log("TIPOOOO-->>", typeof clef);
@@ -133,40 +141,56 @@ listInstrument.addEventListener('change', function(){
 })
 
 //EVENTOS POR FAMILIA DE INSTRUMENTO -NAV LATERAL
-familyAll.addEventListener('click', function(){
+let instfamily;
+document.addEventListener('click', (e) => {
+    console.log('--->', e.target)
+    let element = e.target;
+    instfamily = element.getAttribute('id');
+    console.log("llegooo-->>>", instfamily);
+    navFamily(instfamily);
+})
+
+/*familyAll.addEventListener('click', function(){
     console.log("Selecciona TODOS");
     printSelect(orchestra);
+    galeryDiv.style.display = "block";
 });
 familyCuerda.addEventListener('click', function(){
-    console.log("Selecciona CUERDAS");
-    const instrCuerdas = "cuerdas";
-    const cuerdas = filterClave(instrCuerdas);
-    printSelect(cuerdas);
-    console.log("RETORNA LA FUNCION-->>", printSelect(cuerdas));
+    instfamily = "cuerdas";
+    navFamily(instfamily);
 });
 familyentoMad.addEventListener('click', function(){
-    console.log("Selecciona VIENTO MAD");
-    const instrVientoMad = "vientos madera";
-    const vientoMad = filterFamily(instrVientoMad);
-    printSelect(vientoMad);
+    instfamily = "vientos madera";
+    navFamily(instfamily);
 });
 familyVientoMet.addEventListener('click', function(){
-    console.log("Selecciona VIENDO MET");
-    const instrVientoMet = "vientos metal";
-    const vientoMet = filterFamily(instrVientoMet);
-    printSelect(vientoMet);
+    instfamily = "vientos metal";
+    navFamily(instfamily);
 });
 familyPercusion.addEventListener('click', function(){
-    console.log("Selecciona PERCUSION");
-    const instrPercusion = "percusion";
-    const percusion = filterFamily(instrPercusion);
-    printSelect(percusion);
+    instfamily = "percusion";
+    navFamily(instfamily);
 });
 familySolista.addEventListener('click', function(){
-    console.log("Selecciona SOLISTA");
-    const instrSolista = "solista";
-    const solista = filterFamily(instrSolista);
-    printSelect(solista);
-});
+    instfamily = "solista";
+    navFamily(instfamily);
+});*/
+
+
+function navFamily (str){
+    const family = ["cuerdas", "vientos madera","vientos metal", "percusion", "solista"]
+    let familia; 
+    for (let i = 0; i< family.length; i++) {
+        familia += family[i]; 
+        if(familia === str){
+            const family = filterFamily(str);
+            printSelect(family);
+            galeryDiv.style.display = "block";
+        }
+        else{
+            galeryDiv.style.display = "none";
+        }
+    }
+}
 
 

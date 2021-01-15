@@ -38,40 +38,40 @@
     <!-------------------------NAVEGADOR LATERAL-------------------------------->
     <div class="navigation">
       <ul>
-        <li id="todos">
+        <li>
           <a href="#">
-            <span class="icon"><i class="fas fa-music"></i></span>
-            <span class="title">Todos</span>
-          </a>
-        </li>
-        <li id="cuerdas">
-          <a href="#">
-            <span class="icon"><i class="iconOrqviolin"></i></span>
-            <span class="title">Cuerdas</span>
-          </a>
-        </li>
-        <li id="vientoMad">
-          <a href="#">
-            <span class="icon"><i class="iconOrqclarinet"></i></span>
-            <span class="title" >Viento Madera</span>
-          </a>
-        </li>
-        <li id="vientoMet">
-          <a href="#">
-            <span class="icon"><i class="iconOrqtrumpet"></i></span>
-            <span class="title">Viento Metal</span>
+            <span class="icon"><i class="fas fa-music" id="todos"></i></span>
+            <span class="title" id="todos">Todos</span>
           </a>
         </li>
         <li>
-          <a href="#" id="percusion">
-            <span class="icon"><i class="iconOrqtambor"></i></span>
-            <span class="title">Percusión</span>
+          <a href="#">
+            <span class="icon"><i class="iconOrqviolin" id="cuerdas"></i></span>
+            <span class="title" id="cuerdas">Cuerdas</span>
           </a>
         </li>
-        <li id="solista">
+        <li>
           <a href="#">
-            <span class="icon"><i class="iconOrqpiano-de-cola"></i></span>
-            <span class="title">Solista</span>
+            <span class="icon"><i class="iconOrqclarinet" id="vientos madera"></i></span>
+            <span class="title" id="vientos madera">Viento Madera</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="iconOrqtrumpet" id="vientos metal"></i></span>
+            <span class="title" id="vientos metal">Viento Metal</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="iconOrqtambor" id="percusion"></i></span>
+            <span class="title" id="percusion">Percusión</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="iconOrqpiano-de-cola" id="solista"></i></span>
+            <span class="title" id="solista">Solista</span>
           </a>
         </li>
       </ul>
@@ -98,7 +98,7 @@
         </div>
       </section>
       <!--FICHA DEL INSTRUMENTO-->
-      <section class="overlay">
+      <section class="modalInstrument" id="modalInstrument">
         <a href="#" id="btn-popup" class="btn-popup"><i class="fas fa-times"></i></a>
         <div id="instrumento" class="ficha-popup">
           <img src="" alt="" id="imgInstrument" class="imgInstrument">
