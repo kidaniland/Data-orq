@@ -10,30 +10,30 @@
   </head>
   <body>
     <header>
-      <div class="logo">Orquesta Sinfónica</div>
-      <!-----------------------BARRA DE FILTROS----------------------------------->
-      <nav class="barra"> 
-        <div class="nav-items">
-         <li>
-            <label for="clave">Instrumentos por clave</label>
-            <select name="clave" id="clave">
-              <!--las clves vienen desde js por el array-->
-            </select>
-          </li>
-          <li>
-            <label for="nombre-instrumentos">Instrumentos</label>
-            <select id="listInstument">
-              <!--rellenado desde Js-->
-            </select>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon"><i class="iconOrqcasa-silueta-negra-sin-puerta"></i></span>
-              <span class="title" id="home">Home</span>
-            </a>
-          </li>
-        </div>
-      </nav>
+      <div class="logo">
+        <!--<img src="https://cso.org/globalassets/images-event-bio-banners-1200x300/content_banner_audience_1200x300.jpg" alt="teatro">-->
+        <h1>Orquesta Sinfónica</h1>
+        <nav>
+          <div class="nav-items">
+            <li class="home">
+              <a href="#">
+                <span class="icon"><i class="fas fa-align-justify"></i></span>
+              </a>
+            </li>
+            <li class="buscar">
+              <input type="text" placeholder="Buscar instrumento" required>
+              <div class="btn">
+                <i class="fas fa-search icon"></i>
+              </div>
+            </li>
+            <li class="filtro-clave">
+              <select name="clave" id="clave">
+                <!--las clves vienen desde js por el array-->
+              </select>
+            </li>
+          </div>   
+        </nav>
+      </div>
     </header>
     <!-------------------------NAVEGADOR LATERAL-------------------------------->
     <div class="navigation">
@@ -84,37 +84,18 @@
               <img src="./image/orquesta.jpg" alt="">
             </div>
           </section>-->
-      <!--PAGINA PRINCIPAL GRID DE ITEMS-->
-      <section class="grid" id="grid">
+      <!-----GRID DE ITEMS----->
+      <section class="grid">
         <div id="item" class="item">
+          <p id="instPorClave" class="text"></p>
           <!--las imagenes mini y nombres vienen desde la data-->
-        </div>
-      </section>
-      <!--PAGINA PARA SELECCION POR CLAVES-->
-      <section class="porClaves" id="porClaves">
-        <p id='instPorClave'></p></br>
-        <div id="itemClave" class="itemClave">
-          <!--El contenido viene desde JS y el evento oncchange-->
         </div>
       </section>
       <!--FICHA DEL INSTRUMENTO-->
       <section class="modalInstrument" id="modalInstrument">
         <a href="#" id="btn-popup" class="btn-popup"><i class="fas fa-times"></i></a>
-        <div id="instrumento" class="ficha-popup">
-          <img src="" alt="" id="imgInstrument" class="imgInstrument">
-          <audio src="" id="audioInstruemnt" class="audioInstruemnt"></audio>
-          <img src="" alt="" id="positionInstrument" class="positionInstrument">
-        </div>
-        <div id= "dataInstrument">
-          <h1 id="titleInstument" class="title"></h1>
-          <p class="textP" id="sTitle"></p>
-          <p class="textP">
-            Clave: <span id="clave" class="text"></span></br>
-            Familia: <span id="familia" class="text"></span></br>
-            Dato: <span id="dato" class="text"></span></br>
-            <p id="utiliza" class="textP"></p>
-          </p>
-        </div>
+          <!--IZQ agrego img, audio y position en js-->
+          <!--DERECH agrego titulo, datos, relacionados y características en js-->
       </section>
     </main>
     <!--FOOOTER

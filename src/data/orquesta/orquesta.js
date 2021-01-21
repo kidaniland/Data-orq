@@ -16,6 +16,7 @@ export default {
   {
     "num": "02",
     "nombre": "Viola",
+    "nombre_dos": "",
     "clave": "do",
     "familia": "cuerdas",
     "cuerdas": "do, sol, re, la",
@@ -85,6 +86,7 @@ export default {
   {
     "num": "07",
     "nombre": "oboe",
+    "nombre_dos": "",
     "clave": "sol",
     "familia": "vientos madera",
     "boquilla": "lengüeta doble",
@@ -98,6 +100,7 @@ export default {
   {
     "num": "08",
     "nombre": "Corno Inglés",
+    "nombre_dos": "",
     "clave": "sol",
     "familia": "vientos madera",
     "boquilla": "lengüeta doble",
@@ -111,6 +114,7 @@ export default {
   {
     "num": "09",
     "nombre": "Clarinete",
+    "nombre_dos": "",
     "clave": "sol",
     "familia": "vientos madera",
     "boquilla": "lengüeta simple",
@@ -124,6 +128,7 @@ export default {
   {
     "num": "10",
     "nombre": "Fagot",
+    "nombre_dos": "",
     "clave": "fa",
     "familia": "vientos madera",
     "boquilla": "lengüeta doble",
@@ -137,6 +142,7 @@ export default {
   {
     "num": "11",
     "nombre": "Trompeta",
+    "nombre_dos": "",
     "clave": "sol",
     "familia": "vientos metal",
     "dato": "El sonido se produce gracias a la vibración de los labios del intérprete en la parte denominada boquilla a partir de la columna del aire (flujo del aire). Comúnmente, suele estar afinada en si ♭ (bemol), es decir, un tono por debajo de la afinación escrita en el pentagrama, aunque también hay trompetas afinadas en fa, en do, en la y en mi bemol.",
@@ -149,6 +155,7 @@ export default {
   {
     "num": "12",
     "nombre": "Trombón",
+    "nombre_dos": "",
     "clave": "fa",
     "familia": "vientos metal",
     "dato": "Trompeta, trompeta de varas, trompeta baja, bombardino, sacabuche, tuba, trompa, fliscorno",
@@ -174,6 +181,7 @@ export default {
   {
     "num": "14",
     "nombre": "Tuba",
+    "nombre_dos": "",
     "clave": "fa",
     "familia": "vientos metal",
     "dato": "La tuba o bajo es el mayor de los instrumentos de viento-metal y sus antecesores son el serpentón y el oficleido. Es uno de los instrumentos más recientemente añadidos a la orquesta sinfónica moderna, aparecido en 1835 con Wilhelm Friedrich Wieprecht y Johann Gottfried Moritz, sustituyendo al oficleido del siglo XVIII. El sonido se produce gracias a la vibración de los labios del intérprete en la parte denominada boquilla a partir de la columna del aire (flujo del aire). La primera vez que se utilizó la tuba moderna en una orquesta sinfónica fue en El anillo de los nibelungos de Richard Wagner.",
@@ -212,6 +220,7 @@ export default {
   {
     "num": "17",
     "nombre": "Bombo",
+    "nombre_dos": "",
     "clave": "n/a",
     "familia": "percusion",
     "dato": "El bombo es un instrumento musical de percusión membranófono, de timbre muy grave aunque de tono indeterminado. Debido a su sonido grave, se usa habitualmente para marcar y mantener el pulso en diversos estilos de música. En el ámbito orquestal, el bombo evolucionó hacia medidas notablemente mayores, hasta llegar a tamaños de más de dos metros de diámetro, y se suspende en un soporte diseñado para posicionar el instrumento libremente. Por su parte, el bombo de marcha se mantuvo en medidas más pequeñas, adecuadas para poder cargar con el instrumento mientras es tocado, y se benefició de la introducción del plástico en los parches por sus mejores condiciones frente a cambios atmosféricos.",
@@ -224,6 +233,7 @@ export default {
   {
     "num": "18",
     "nombre": "Triángulo",
+    "nombre_dos": "",
     "clave": "n/a",
     "familia": "percusion",
     "dato": "El triángulo es un instrumento de percusión de metal, perteneciente al grupo de los idiofonos, porque el sonido resultante es fruto de la vibración del metal tras ser golpeado con la baqueta de acero doblada en forma de triángulo , como su nombre indica, con la particularidad de que uno de sus vértices queda abierto. Normalmente, el ejecutante no sostiene directamente el instrumento haciéndolo por uno de sus lados sino mediante un cordel que, esta atado al vértice superior, que sirve para sujetarlo.",
@@ -235,6 +245,7 @@ export default {
   {
     "num": "19",
     "nombre": "Marimba",
+    "nombre_dos": "",
     "clave": "Sol",
     "clave_dos": "fa",
     "familia": "percusion",
@@ -248,6 +259,7 @@ export default {
   {
     "num": "20",
     "nombre": "Gong",
+    "nombre_dos": "",
     "clave": "n/a",
     "familia": "percusion",
     "dato": "Se trata de un gran disco metálico (habitualmente, de bronce) con los bordes curvados (generalmente hacia adentro) y sostenido por dos pilares de metal, que se percute afinado o no, por lo que, puede generar tanto sonidos determinados como indeterminados. Es muy popular en China, de donde es originario. Sus orígenes se remontan al 3500 A. C. Se cree que ya se usaban en Mesopotamia. Este tuvo su origen en Oriente, y originalmente servía para expulsar demonios y dar paz al alma.",
@@ -271,9 +283,11 @@ export default {
   {
     "num": "22",
     "nombre": "Director",
+    "nombre_dos": "",
     "clave": "n/a",
     "familia": "solista",
     "dato": "El director de la orquesta cumple con una función principal respecto a la orquesta sinfónica, puesto que es el que la dirige e incluso da la formación musical. Es una persona que no solo mantiene el tiempo de la pieza y da las entradas de los instrumentos para que la interpretación sea coherente, sino que debe interpretar la partitura según el concepto “global”, manteniéndose fiel al espíritu original de la obra pero dando una visión personal. Para conseguirlo, debe conocer en profundidad la vida y obra de los compositores. El director no aparece en la orquesta hasta el siglo XIX, cuando realmente se establecieron los estándares de orquesta sinfónica, y surgió casi por motivos estéticos. Antes era el primer violín (concertino), el clavecinista u organista quien dirigía (continuista), y actualmente se encargan de afinar el conjunto y de la colocación del director dentro del campo visual de los intérpretes. El solista en las obras se sitúa junto al director.",
+    "relacionado": "",
     "sonido": "./sound/orquesta.mp3",
     "img": "https://live.staticflickr.com/65535/50810420608_3ba1b3f631_m.jpg",
     "miniatura": "https://live.staticflickr.com/65535/50810420608_3ba1b3f631_m.jpg",
@@ -282,6 +296,7 @@ export default {
   {
     "num": "23",
     "nombre": "Arpa",
+    "nombre_dos": "",
     "clave": "sol",
     "clave_dos": "fa",
     "familia": "solista",
@@ -295,6 +310,7 @@ export default {
   {
     "num": "24",
     "nombre": "Piano",
+    "nombre_dos": "",
     "clave": "sol",
     "clave_dos": "fa",
     "familia": "solista",

@@ -8,64 +8,66 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 body{
-    min-height: 100vh;
-    background-color: #150019;
+    min-height: 100vh; /*altura del viewport*/
+    background-color: #d5c3aa;
 }
-a {
-    text-decoration: none;
-}
-.contenedor{
+/*.contenedor{
     width: 90%;
     max-width: 80rem;
     margin: auto;
-}
+}*/
 /*HEADER*/
 header{
     position: sticky;
     top: 0;
-    background-color: #d5c3aa;
     width: 100%;
     z-index: 1000;
     height: 14rem;
 }
-header .logo{
-    background-color: #867666;
+.logo{
+    background-image: url("https://cso.org/globalassets/images-event-bio-banners-1200x300/content_banner_audience_1200x300.jpg");
+    height: 22rem;
+    background-size: cover;
+    
+}
+.logo h1{
     color: #fff;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 600;
     letter-spacing: -0.01rem;
     text-align: center;
+    position: fixed;
+    top: 2rem;
 }
-header nav{
-    background-color:#d5c3aa;
-    padding: 1rem 4rem 1rem 7rem;
+nav{
     border-left: none;
     border-right: none;
-    display: flex;
+    display: list-item;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    height: 7rem;
-    padding: 0 10rem;
+    padding: 1.7rem 2rem;
 }
-header nav .nav-items{
+nav .nav-items{
     display: flex;
     flex: 1;
     list-style: none;
     padding: 0 0 0 4rem;
+    margin-top: 15rem;
 }
-header nav .nav-items li{
-    padding: 0 1.5rem;
-}
-header nav .nav-items li a{
-    color: #fff;
-    font-size: 1.8rem;
+
+nav .nav-items li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-size: 4rem;
     text-decoration: none;
+    color: #fff;
 }
-header nav .nav-items li a:hover{
+nav .nav-items li a:hover{
     color: #867666;
 }
-header nav .nav-items input{
+nav .nav-items input{
     display: flex;
     height: 4rem;
     background: #f8f4ee;
@@ -75,7 +77,7 @@ header nav .nav-items input{
     width: 100%;
     border-radius: 1rem;
 }
-header nav .nav-items select{
+nav .nav-items select{
     display: flex;
     height: 4rem;
     background: #f8f4ee;
@@ -85,11 +87,42 @@ header nav .nav-items select{
     width: 50%;
     border-radius: 1rem;
 }
-header nav .nav-items label{
+nav .nav-items label{
     color: #867666;
     font-size: 1.8rem;
     text-decoration: none;
 }
+/*.buscar input{
+    width: 0;
+    height: 4rem;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 3rem;
+    transition: all 0.6s ease;
+}
+.buscar .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #867666;
+    width: 0.55rem;
+    height: 0.55rem;
+    line-height: 0.55rem;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.buscar:hover input{
+    width: 24rem;
+}
+.buscar.input:focus{
+    width: 24rem;
+}*/
 /*-------------------------NAVEGADOR-------------------------*/
 .navigation {
     position: fixed;
