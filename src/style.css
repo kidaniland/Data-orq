@@ -11,18 +11,14 @@ body{
     min-height: 100vh; /*altura del viewport*/
     background-color: #d5c3aa;
 }
-/*.contenedor{
-    width: 90%;
-    max-width: 80rem;
-    margin: auto;
-}*/
+
 /*HEADER*/
 header{
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 14rem;
+    height: 6rem;
 }
 .logo{
     background-image: url("https://cso.org/globalassets/images-event-bio-banners-1200x300/content_banner_audience_1200x300.jpg");
@@ -38,104 +34,146 @@ header{
     text-align: center;
     position: fixed;
     top: 2rem;
+    padding-left: 5rem;
+}
+.nav-items{
+    background-color: #867666;
+    text-align: center;
 }
 nav{
     border-left: none;
     border-right: none;
-    display: list-item;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.7rem 2rem;
-}
-nav .nav-items{
-    display: flex;
-    flex: 1;
+    display: inline-flex;
+    color: #fff;
     list-style: none;
-    padding: 0 0 0 4rem;
-    margin-top: 15rem;
+}
+.nav-items nav li{
+    margin: 1.5rem;
+} 
+/*LI de family*/
+.nav-items .family label #sidebarBtn{
+    z-index: 1;
+    color: #eae2d6;
+    position: absolute;
+    cursor: pointer;
+    left: 1rem;
+    font-size: 4rem;
+    margin: -0.5rem 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+.nav-items .family label #sidebarBtn:hover{
+    color: #e1b80d;
+}
+#check:checked ~ .navigation{
+    /*left: -19rem;*/
+    width: 26rem;
+}
+#check:checked ~ .navigation a .icon .title{
+    display: none;
+}
+#check:checked ~ .navigation a .icon{
+    font-size: 4rem;
+    margin-left: 0rem;
+    /*width: 8rem;*/
 }
 
-nav .nav-items li a{
+/*LI buscar*/
+nav .search{
     position: relative;
-    width: 100%;
     display: flex;
-    font-size: 4rem;
-    text-decoration: none;
-    color: #fff;
+    height: 3rem;
+    width: 60rem;
+    line-height: 3;
+    overflow: hidden;
 }
-nav .nav-items li a:hover{
-    color: #867666;
-}
-nav .nav-items input{
-    display: flex;
-    height: 4rem;
-    background: #f8f4ee;
-    min-width: 18%!important;
-    border: 0.01rem solid rgba(155, 155, 155, 0.2);
-    height: 100%;
-    width: 100%;
-    border-radius: 1rem;
-}
-nav .nav-items select{
-    display: flex;
-    height: 4rem;
-    background: #f8f4ee;
-    min-width: 18%!important;
-    border: 0.01rem solid rgba(155, 155, 155, 0.2);
-    height: 100%;
-    width: 50%;
-    border-radius: 1rem;
-}
-nav .nav-items label{
-    color: #867666;
+nav .search input{
+    appearance: none;
+    outline: 0; /*contorno de un elemento*/
+    box-shadow: none;
+    border: 0!important;
+    border-radius: 0.5rem;
+    background: #eae2d6;
+    background-image: none;
     font-size: 1.8rem;
+    flex: 1;
+    padding: 0.9rem 1rem 0.9rem 7.2rem;
+    color:#867666;
+    cursor: text;
+}
+nav .search input:focus-within{
+    background: #fff;
+}
+nav .btn{
+    background-color: #e1b80d;
+    cursor: pointer;
+    width: 6rem;
+    position: absolute;
+    margin-left: 54rem;
+    border-radius: 0.5rem;
+}
+nav .btn i{
     text-decoration: none;
-}
-/*.buscar input{
-    width: 0;
-    height: 4rem;
-    padding: 0 2rem;
+    color: #eae2d6;
+    font-size: 1.6rem;
+}    
+/*LI select */
+nav .filtro-clave select{
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: #eae2d6;
+    background-image: none;
     font-size: 1.8rem;
-    color: #000;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 3rem;
-    transition: all 0.6s ease;
+    flex: 1;
+    padding: 0 0.5rem;
+    color:#867666;
+    cursor: pointer;
 }
-.buscar .btn{
+nav .filtro-clave select::-ms-expand{
+    display: none;
+}
+nav .filtro-clave{
+    position: relative;
+    display: flex;
+    height: 3rem;
+    width: 20rem;
+    left: 10rem;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: 0.5rem;
+} 
+nav .filtro-clave::after{
+    content: '\25BC';
     position: absolute;
     top: 0;
     right: 0;
-    background: #867666;
-    width: 0.55rem;
-    height: 0.55rem;
-    line-height: 0.55rem;
-    text-align: center;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 50%;
+    padding: 0 1.5em;
+    background: #e1b80d;
     cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
 }
-.buscar:hover input{
-    width: 24rem;
+nav .filtro-clave:hover::after{
+    color: #e1b80d;
 }
-.buscar.input:focus{
-    width: 24rem;
-}*/
-/*-------------------------NAVEGADOR-------------------------*/
+
+/*---------------Navegador Lateral-------------------------*/
 .navigation {
     position: fixed;
     width: 6rem;
     height: 100%;
+    top: 6rem;
     background-color: #867666;
     transition: 0.5s;
+    transition-property: width;
     overflow: hidden;
 }
-.navigation:hover,
+/*.navigation:hover,
 .navigation:active{
     width: 30rem;
-}
+}*/
 .navigation ul{
     position: absolute;
     top: 10rem;
@@ -180,25 +218,70 @@ nav .nav-items label{
     text-align: start;
     white-space: nowrap;
 }
-/*MAIN*/
-main{
+/*------------------------MAIN----------------------------*/
+/*Section Home*/
+.home{
+    margin-left: 25rem;
+    background: url("./image/orquesta.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+}
+#check:checked ~ .home{
+    margin-left: 6rem;
+}
+#check{ /*desaparece el check que está antes del header*/
+    display: none;
+}
+/*Cuadrícula de instrumentos*/
+.item{
     background-color: #eae2d6;
+    margin-left: 25rem;
+    margin-right: 21rem;
+    height: 100vh;
 }
-.contenedores .gird{
-    background-color: #e1b80d;
+.item .text{
+    text-align: center;
+    font-size: 4rem;
+    color: #867666;
 }
-.grid .item .div-galery{
+.item .div-galery{
     display: inline-grid;
     position: inherit;
     padding: 2rem;
 }
-.grid .item .div-galery .image-mini{
+.item .div-galery .image-mini{
     border-radius: 2rem;
-    width: 150px;
-    height: 150px;
+    margin-left: 3rem;
+    width: 180px;
+    height: 180px;
 }
-.grid .item .div-galery .image-mini:hover {
+.item .div-galery .image-mini:hover {
 	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+.item .name-instrument{
+    text-align: center;
+    font-size: 1.8rem;
+}
+/*ficha de instrumento*/
+.modalInstrument{
+    background-color: blueviolet;
+    margin-left: 25rem;
+    margin-right: 21rem;
+    height: 100vh;
+}
+.modalInstrument a{
+    align-items: center;
+    color: #fff;
+}
+.modalInstrument .div-derecha{
+    background-color: #e1b80d;
+    display: table-caption;
+}
+.modalInstrument .div-izquierda{
+    background-color: greenyellow;
+    display: table-caption;
 }
 /*FOOTER*/
 footer{

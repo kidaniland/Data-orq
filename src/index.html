@@ -9,29 +9,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
   </head>
   <body>
+    <input type="checkbox" id="check">
     <header>
-      <div class="logo">
-        <!--<img src="https://cso.org/globalassets/images-event-bio-banners-1200x300/content_banner_audience_1200x300.jpg" alt="teatro">-->
+      <!--<div class="logo">
         <h1>Orquesta Sinfónica</h1>
+      </div>-->
+      <div class="nav-items">
         <nav>
-          <div class="nav-items">
-            <li class="home">
-              <a href="#">
-                <span class="icon"><i class="fas fa-align-justify"></i></span>
-              </a>
-            </li>
-            <li class="buscar">
-              <input type="text" placeholder="Buscar instrumento" required>
-              <div class="btn">
-                <i class="fas fa-search icon"></i>
-              </div>
-            </li>
-            <li class="filtro-clave">
-              <select name="clave" id="clave">
-                <!--las clves vienen desde js por el array-->
-              </select>
-            </li>
-          </div>   
+          <li class="family">
+            <label for="check">
+              <i class="fas fa-align-justify" id="sidebarBtn"></i>
+            </label>
+          </li>
+          <li class="search">
+            <input type="text" placeholder="Busca un instrumento musical">
+            <div class="btn">
+              <i class="fas fa-search icon"></i>
+            </div>
+          </li>
+          <li class="filtro-clave">
+            <select name="clave" id="clave">
+              <!--las clves vienen desde js por el array-->
+            </select>
+          </li>   
         </nav>
       </div>
     </header>
@@ -41,7 +41,7 @@
         <li>
           <a href="#">
             <span class="icon"><i class="fas fa-music" id="todos"></i></span>
-            <span class="title" id="todos">Todos</span>
+            <span class="title" id="todos">Todas las familias</span>
           </a>
         </li>
         <li>
@@ -77,15 +77,13 @@
       </ul>
     </div>
     <!-------------------------MAIN--------------------------------------------->
-    <main class="contenedores">
-      <!--PAGINA HOME-->
-          <!--<section>
-            <div>
-              <img src="./image/orquesta.jpg" alt="">
-            </div>
-          </section>-->
+    <main>
+      <!--PAGINA HOME
+      <div class="home">
+        <img src="" alt="">
+      </div>-->
       <!-----GRID DE ITEMS----->
-      <section class="grid">
+      <section>
         <div id="item" class="item">
           <p id="instPorClave" class="text"></p>
           <!--las imagenes mini y nombres vienen desde la data-->

@@ -20,7 +20,7 @@ selectModal.style.display = "none";
 
 //INSERTAR DATOS A SELEC POR CLAVE
 let fragment = document.createDocumentFragment();
-let claves = ['Sol', 'Do', 'Fa', 'n/a'];
+let claves = ['Claves de lectura', 'Sol', 'Do', 'Fa', 'n/a'];
 
 for (const clave of claves){
     let selectC = document.createElement('option');
@@ -37,7 +37,7 @@ selectClave.addEventListener('change', function(){
     let selectClef = filterClave(clef);
     printSelect(selectClef);
 })
-
+/*
 //INSERTAR DATOS EN SELECT POR NOMBRE DE INSTRUMENTOS
 const fragmentD = document.createDocumentFragment();
 let allInstrument = orchestra.map(instrument => instrument.nombre);
@@ -56,7 +56,7 @@ listInstrument.addEventListener('change', function(){
     let instrument = listInstrument.value;
     console.log("TIPO-->>", typeof instrument);
     //let selectInst = selectInstrument(instrument); 
-})
+})*/
 
 //EVENTOS POR FAMILIA DE INSTRUMENTO -NAV LATERAL
 let instfamily;
@@ -104,7 +104,7 @@ const printSelect = (arr) => {
         imgElement.setAttribute('src', item.miniatura);
         //h2
         const nameElement = document.createElement('h2');
-        nameElement.setAttribute('class', 'name-galery');
+        nameElement.setAttribute('class', 'name-instrument');
         nameElement.textContent = item.nombre;
         
         divElement.appendChild(imgElement);
