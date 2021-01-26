@@ -92,8 +92,32 @@
       <!--FICHA DEL INSTRUMENTO-->
       <section class="modalInstrument" id="modalInstrument">
         <a href="#" id="btn-popup" class="btn-popup"><i class="fas fa-times"></i></a>
-          <!--IZQ agrego img, audio y position en js-->
-          <!--DERECH agrego titulo, datos, relacionados y características en js-->
+        <div class="div-derecha">
+          <img id="imgInstrument" class="imgInstrument">
+          <audio id="audioInstrument" class="audioInstrument"></audio>
+          <div class="img-position">
+            <p class="text">Posición en la Orquesta:</p></br>
+            <img id="imgPosition">
+          </div>
+        </div>
+        <div class="div-izquierda">
+          <div class="titulo">
+            <h1 id="card-title" class="title"></h1>
+            </br>
+            <p id="titleTwo" class="text"></p>
+          </div>
+          <div class="datos">
+            <p class="text">
+              Familia: <span id="family" class="text"></span></br>
+              Clave principal de lectura:  <span id="clef" class="text"></span></br>
+              <p id="secondClef" class="text"></p></br>
+              <p id="caracteristica" class="text"></p></br>
+              <p class="text">
+              Dato: <span id="dato" class="text"></span></br>
+              Relacionado con: <span span id="relacion" class="text"></span></p>
+            </p>
+          </div>
+        </div>
       </section>
     </main>
     <!--FOOOTER

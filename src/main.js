@@ -125,66 +125,48 @@ const printSelect = (arr) => {
 };
 
 //INSERTAR DATOS EN LA FICHA POR INSTRUMENTOS
-
 function printFicha(obj){
     console.log("llega a PRINFICHA>>", obj)
-    selectModal.style.display = "block";
+    selectModal.style.display = "block";  
     //Derecha
-        //div
-        const divElement = document.createElement('div');
-        divElement.setAttribute('class', 'div-derecha');
         //img
-        const imgElement = document.createElement('img');
-        imgElement.setAttribute('class', 'imgInstrument');
+        const imgElement = document.getElementById('imgInstrument');
         imgElement.setAttribute('src', obj.img);
         //audio
-        const soundElement = document.createElement('audio');
-        soundElement.setAttribute('class', 'audioInstrument');
+        const soundElement = document.getElementById('audioInstrument');
+        soundElement.setAttribute('controls', true);
         soundElement.setAttribute('src', obj.sonido);
         //position
-        const imgPosition = document.createElement('img');
-        imgPosition.setAttribute('class', 'img-position');
+        const imgPosition = document.getElementById('imgPosition');
         imgPosition.setAttribute('src', obj.posicion);
-        
-        divElement.appendChild(imgElement);
-        divElement.appendChild(soundElement);
-        divElement.appendChild(imgPosition);  
-        selectModal.appendChild(divElement);
-        
     //Izquierda
-        //div
-        const divElement2 = document.createElement('div');
-        divElement2.setAttribute('class', 'div-izquierda');
-        //title
-        const titleElement = document.createElement('h1');
-        titleElement.setAttribute('class', 'card-title');
+        //h1
+        const titleElement = document.getElementById('card-title');
         titleElement.textContent = obj.nombre;
-
-        divElement2.appendChild(titleElement);
-        //sub title
+        //sub título P
         if(obj.nombre_dos != ""){
-            const titleSecond = document.createElement('p');
-            titleSecond.setAttribute('class', 'text-p');
+            const titleSecond = document.getElementById('titleTwo');
             titleSecond.textContent = obj.nombre_dos;
-            divElement2.appendChild(titleSecond);
         }
-        //P
-        const pElement = document.createElement('p');
-        pElement.setAttribute('class', 'text-p');
-        pElement.textContent = 
-        `Clave: ${obj.clave}, Familia: ${obj.familia}, Dato: ${obj.dato}, Relacionado con: ${obj.relacionado}`;
-        //extra
-        if (parseInt(obj.num)< 5){
-            const pElementdos = document.createElement('p');
-            pElementdos.setAttribute('class', 'text-p');
-            pElementdos.textContent = 'Cuerdas: ${obj.cuerdas}';
-            divElement2.appendChild(pElementdos);
+        //p
+        const spanFamily = document.getElementById('family');
+        spanFamily.textContent = obj.familia;
+        const spanClave = document.getElementById('clef');
+        spanClave.textContent = obj.clave;
+        if(obj.clave_dos != ""){
+            const clefSecond = document.getElementById('secondClef');
+            clefSecond.textContent ="Segunda clave de lectura: " + obj.nombre_dos;
         }
-        else if(parseInt(obj.num) < 11 && obj.num > 4){
-            const pElementdos = document.createElement('p');
-            pElementdos.setAttribute('class', 'text-p');
-            pElementdos.textContent = 'Boquilla: ${obj.boquilla}';
-            divElement2.appendChild(pElementdos);
+        if(parseInt(obj.num)<5){
+            const caracteristic = document.getElementById('caracteristica');
+            caracteristic.textContent = "Cuerdas: " + obj.caracteristica;
         }
-        selectModal.appendChild(divElement2);
+        else if(parseInt(obj.num)< 11 && parseInt(obj.num)>4){
+            const caracteristic = document.getElementById('caracteristica');
+            caracteristic.textContent = "Boquilla: " + obj.caracteristica;
+        }
+        const spanDato = document.getElementById('dato');
+        spanDato.textContent = obj.dato;
+        const spanRelacionado = document.getElementById('relacion');
+        spanRelacionado.textContent = obj.relacionado;
 }
