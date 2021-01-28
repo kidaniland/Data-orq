@@ -220,6 +220,9 @@ nav .filtro-clave:hover::after{
 }
 /*------------------------MAIN----------------------------*/
 /*Section Home*/
+main{
+    background-color: #d5c3aa;
+}
 .home{
     margin-left: 25rem;
     background: url("./image/orquesta.jpg") no-repeat;
@@ -236,7 +239,6 @@ nav .filtro-clave:hover::after{
 }
 /*Cuadrícula de instrumentos*/
 .item{
-    background-color: #eae2d6;
     margin-left: 25rem;
     margin-right: 21rem;
     height: 100vh;
@@ -258,7 +260,7 @@ nav .filtro-clave:hover::after{
     height: 180px;
 }
 .item .div-galery .image-mini:hover {
-	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+	box-shadow: 3px 0px 30px #867666;
 }
 .item .name-instrument{
     text-align: center;
@@ -266,65 +268,71 @@ nav .filtro-clave:hover::after{
 }
 /*ficha de instrumento*/
 .modalInstrument{
-    background-color: blueviolet;
-    display: flex;
-    margin-left: 25rem;
-    margin-right: 21rem;
-    height: 100vh;
+    background-color: #eae2d6;
+    margin-top: 2rem;
+    margin-left: 26rem;
+    margin-right: 29rem;
+    height: 64rem;
+    border-radius: 1rem;
 }
 .modalInstrument a{
-    align-items: center;
-    color: #fff;
+    color: #867666;
+    font-size: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
 }
 .modalInstrument .div-derecha{
-    background-color: #e1b80d;
     width: 50%;
     height: 100%;
 }
 .modalInstrument .div-derecha .imgInstrument{
-    margin-left: 5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
     border-radius: 1rem;
 }
 .modalInstrument .div-derecha audio{
     margin-top: 3rem;
-    margin-left: 5rem;
+    margin-left: 2rem;
     margin-bottom: 3rem;
-}
-.modalInstrument .div-derecha .img-position img{
-    margin-left: 8rem;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
 .modalInstrument .div-derecha .img-position .text{
     font-size: 1.4rem;
-    margin-left: 5rem
+    margin-left: 3rem;
+}
+.modalInstrument .div-derecha .img-position img{
+    margin-left: 8rem;
+    width: 180px;
+    height: 145px;
+    border-radius: 1rem;
 }
 
 .modalInstrument .div-izquierda{
-    background-color: greenyellow;
     width: 50%;
     height: 100%;
 }
 .modalInstrument .div-izquierda .titulo{
-    position: fixed;
-    top: 12rem;
-    justify-content: center;
-    align-items: center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    display: flex;
 }
 .modalInstrument .div-izquierda .titulo .title{
     font-size: 4rem;
+    width: 60%;
 }
 .modalInstrument .div-izquierda .titulo .text{
     font-size: 1.8rem;
+    margin-top: 2rem;
+    width: 40%;
 }
 .modalInstrument .div-izquierda .datos{
-    position: fixed;
-    top: 18rem;
-    justify-content: center;
-    align-items: center;
-    right: 25rem;
-    left: 70rem; 
+    width: 31rem;
+    margin-left: 2rem;
+    height: 50rem;
 }
 .modalInstrument .div-izquierda .datos .text{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 

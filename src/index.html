@@ -22,9 +22,9 @@
             </label>
           </li>
           <li class="search">
-            <input type="text" placeholder="Busca un instrumento musical">
-            <div class="btn">
-              <i class="fas fa-search icon"></i>
+            <input type="text" autofocus placeholder="Busca un instrumento musical" id="search" autocomplete="off">
+            <div class="btn" id="button">
+              <i class="fas fa-search icon" id="button"></i>
             </div>
           </li>
           <li class="filtro-clave">
@@ -91,7 +91,6 @@
       </section>
       <!--FICHA DEL INSTRUMENTO-->
       <section class="modalInstrument" id="modalInstrument">
-        <a href="#" id="btn-popup" class="btn-popup"><i class="fas fa-times"></i></a>
         <div class="div-derecha">
           <img id="imgInstrument" class="imgInstrument">
           <audio id="audioInstrument" class="audioInstrument"></audio>
@@ -103,21 +102,23 @@
         <div class="div-izquierda">
           <div class="titulo">
             <h1 id="card-title" class="title"></h1>
-            </br>
             <p id="titleTwo" class="text"></p>
           </div>
           <div class="datos">
             <p class="text">
-              Familia: <span id="family" class="text"></span></br>
-              Clave principal de lectura:  <span id="clef" class="text"></span></br>
-              <p id="secondClef" class="text"></p></br>
-              <p id="caracteristica" class="text"></p></br>
+              Familia: <span id="family" class="text"></span>
+              Clave principal de lectura:  <span id="clef" class="text"></span>
+              <p id="secondClef" class="text"></p>
+              <p id="caracteristica" class="text"></p>
               <p class="text">
-              Dato: <span id="dato" class="text"></span></br>
+              Dato: <span id="dato" class="text"></span>
               Relacionado con: <span span id="relacion" class="text"></span></p>
             </p>
           </div>
         </div>
+        <a href="#" id="btnClosed">
+          <i class="fas fa-times"></i>
+        </a>
       </section>
     </main>
     <!--FOOOTER
