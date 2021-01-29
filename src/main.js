@@ -7,7 +7,9 @@ let orchestra = data.orquesta;
 //ELEMENTOS BARRA DE NAVEGADOR
 const selectClave = document.getElementById('clave');
 const home = document.getElementById('home');
+const btnHome = document.getElementById('btnHome');
 const searchInput = document.getElementById('search');
+const btnSearch = document.getElementById('Sbutton')
 
 //ELEMENTOS GRIDS O GALERIA DE INICIO
 const galeryDiv = document.getElementById('item');
@@ -20,16 +22,18 @@ let nameElement;
 const selectModal = document.getElementById('modalInstrument');
 selectModal.style.display = "none";
 
-//ARRAYS DE FAMILIA, CLAVE Y NOMBRE DE INSTRUMENTO
-let instfamily;
+//ARRAY FAMILIA DE INSTRUMENTO
+let instfamily; 
 const family = ["cuerdas", "vientos madera","vientos metal", "percusion", "solista"];
+
+//ARRAY NOMBRE DE INTRUMENTO
 let nameInstument = orchestra.map(function(nam){
     return nam.nombre;
 });
-let fragment = document.createDocumentFragment();
-let claves = ['Claves de lectura', 'Sol', 'Do', 'Fa', 'n/a'];
 
 //INSERTAR DATOS A SELEC POR CLAVE
+let fragment = document.createDocumentFragment();
+let claves = ['Claves de lectura', 'Sol', 'Do', 'Fa', 'n/a'];
 for (const clave of claves){
     let selectC = document.createElement('option');
     selectC.setAttribute('value', clave.toLowerCase());
@@ -44,41 +48,55 @@ selectClave.addEventListener('change', function(){
     //document.getElementById('instPorClave').innerHTML = "Instrumentos que pueden leer en clave de: "+clef;
     let selectClef = filterClave(clef);
     printSelect(selectClef);
-})
+});
 
-//EVENTOS.TARGET POR CADA CLICK
+//EVENTOS.TARGET POR CADA CLICK para instrumentos por familia
 document.addEventListener('click', (e) => {
     let element = e.target;
     instfamily = element.getAttribute('id');
-    //console.log("AL CLICK", instfamily, typeof instfamily);
-
+    console.log("AL CLICK", instfamily, typeof instfamily);
     for (let item of family){
         if(instfamily === item){
             navFamily(instfamily, family);
         }
+        else if(instfamily === "todos"){
+            printSelect(orchestra);
+        }
     }
+});
+
+//EVENTO.TARGET  para cada instrumento
+document.addEventListener('click', (e) =>{
+    let elementInstrument = e.target;
+    let instrumentBtn =  elementInstrument.getAttribute('id');
+    console.log("CLICK EN>>", instrumentBtn);
     for (let item of nameInstument){
-        if(instfamily === item){
+        if(instrumentBtn === item){
             galeryDiv.style.display = "none";
             selectModal.style.display = "flex";
-            let instrument = item;
-            let cardIntrument = selectInstrument(instrument);
+            let cardIntrument = selectInstrument(item);
             //console.log("EL RETORNO ES-->>", cardIntrument, " TIPO>>", typeof cardIntrument);
             printFicha(cardIntrument);
-        }
-        else if(instfamily === "button"){
-            let instrument = searchInput.value;
-            let cardIntrument = selectInstrument(instrument);
-            printFicha(cardIntrument);
-            selectModal.style.display = "flex";
-        }
-        else{
-            //selectModal.style.display = "none";
-        }
+        } 
     }
+});
+
+//EVENTO BOTON SEARCH
+btnSearch.addEventListener('click', () =>{
+    let instrument = searchInput.value;
+    let cardIntrument = selectInstrument(instrument);
+    printFicha(cardIntrument);
+    selectModal.style.display = "flex";
     searchInput.value = "";
 });
 
+
+//EVENTO BOTON HOME
+btnHome.addEventListener('click', () => {
+    galeryDiv.style.display = "none";
+    selectModal.style.display = "none";
+    home.style.display = "block";
+});
 
 /*/SEARCH INPUT
 searchInput.addEventListener('keyup', (e) =>{
@@ -105,11 +123,12 @@ function navFamily (str, arr){
             printSelect(orchestra);
         }
     }
-};
+}
 
 //INSERTAR DATOS A LA GRID O GALERY DE SELECCIONES (CLAVE, FAMILIA)
 const printSelect = (arr) => {
     console.log("LLEGA a printSelect-->>", arr, galeryDiv);
+    home.style.display = "none";
     galeryDiv.style.display = "block";
     galeryDiv.innerHTML = "";
     for (const item of arr){
@@ -131,11 +150,12 @@ const printSelect = (arr) => {
         galeryDiv.appendChild(divElement);
     }
     galeryDiv.appendChild(divElement);
-};
+}
 
 //INSERTAR DATOS EN LA FICHA POR INSTRUMENTOS
 function printFicha(obj){
     console.log("llega a PRINFICHA>>", obj)
+    home.style.display = "none";
     selectModal.style.display = "flex";  
     //Derecha
         //img
@@ -191,5 +211,6 @@ function printFicha(obj){
         const closed = document.getElementById('btnClosed');
         closed.addEventListener('click', function(){
             selectModal.style.display = "none";
-        })
+            home.style.display = "block";
+        });
 }
