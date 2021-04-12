@@ -1,6 +1,6 @@
 export default {
   "orquesta": [{
-    "num": "01",
+    "num": 2,
     "nombre": "Violín",
     "nombre_dos":"Violino",
     "clave": "sol",
@@ -15,7 +15,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50805268772_123f43c99c_m.jpg"
   },
   {
-    "num": "02",
+    "num": 3,
     "nombre": "Viola",
     "nombre_dos": "",
     "clave": "do",
@@ -30,7 +30,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50804405873_56e4266bf0_m.jpg"
   },
   {
-    "num": "03",
+    "num": 4,
     "nombre": "Violonchello",
     "nombre_dos": "Cello",
     "clave": "fa",
@@ -45,7 +45,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50805158336_770a2a39a2_m.jpg"
   },
   {
-    "num": "04",
+    "num": 5,
     "nombre": "Contrabajo",
     "nombre_dos": "Bajo",
     "clave": "fa",
@@ -60,7 +60,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50805158366_3a752a2220_m.jpg"
   },
   {
-    "num": "05",
+    "num": 6,
     "nombre": "Flauta travesera",
     "nombre_dos": "Flauta transversal",
     "clave": "sol",
@@ -75,7 +75,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811159927_429d8b6341_m.jpg"
   },
   {
-    "num": "06",
+    "num": 7,
     "nombre": "Flautín",
     "nombre_dos": "Piccolo",
     "clave": "sol",
@@ -90,8 +90,8 @@ export default {
     "posicion":  "https://live.staticflickr.com/65535/50811159927_429d8b6341_m.jpg"
   },
   {
-    "num": "07",
-    "nombre": "oboe",
+    "num": 8,
+    "nombre": "Oboe",
     "nombre_dos": "",
     "clave": "sol",
     "clave_dos": "",
@@ -105,7 +105,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810301078_412b9bcae1_m.jpg"
   },
   {
-    "num": "08",
+    "num": 9,
     "nombre": "Corno Inglés",
     "nombre_dos": "",
     "clave": "sol",
@@ -120,7 +120,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810301053_9122f44c6a_m.jpg"
   },
   {
-    "num": "09",
+    "num": 10,
     "nombre": "Clarinete",
     "nombre_dos": "",
     "clave": "sol",
@@ -135,7 +135,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810300998_c6542ddfef_m.jpg"
   },
   {
-    "num": "10",
+    "num": 11,
     "nombre": "Fagot",
     "nombre_dos": "",
     "clave": "fa",
@@ -150,7 +150,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811160007_653e612a6d_m.jpg"
   },
   {
-    "num": "11",
+    "num": 12,
     "nombre": "Trompeta",
     "nombre_dos": "",
     "clave": "sol",
@@ -165,7 +165,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810301193_14ce871235_m.jpg" 
   },
   {
-    "num": "12",
+    "num": 13,
     "nombre": "Trombón",
     "nombre_dos": "",
     "clave": "fa",
@@ -180,7 +180,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045786_f8aaa1c8ae_m.jpg"
   },
   {
-    "num": "13",
+    "num": 14,
     "nombre": "Corno Frances",
     "nombre_dos": "Trompa",
     "clave": "fa",
@@ -195,7 +195,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810301318_4d8f4d2d88_m.jpg"
   },
   {
-    "num": "14",
+    "num": 15,
     "nombre": "Tuba",
     "nombre_dos": "",
     "clave": "fa",
@@ -210,7 +210,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811160167_1da0fdbe94_m.jpg" 
   },
   {
-    "num": "15",
+    "num": 16,
     "nombre": "Timpani",
     "nombre_dos": "Timbal de concierto",
     "clave": "fa",
@@ -225,7 +225,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810301288_781578af9b_m.jpg"
   },
   {
-    "num": "16",
+    "num": 17,
     "nombre": "Platillos",
     "nombre_dos": "Platos",
     "clave": "n/a",
@@ -240,7 +240,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045821_f67a4e7598_m.jpg"
   },
   {
-    "num": "17",
+    "num": 18,
     "nombre": "Bombo",
     "nombre_dos": "",
     "clave": "n/a",
@@ -255,7 +255,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045821_f67a4e7598_m.jpg"
   },
   {
-    "num": "18",
+    "num": 19,
     "nombre": "Triángulo",
     "nombre_dos": "",
     "clave": "n/a",
@@ -269,7 +269,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045821_f67a4e7598_m.jpg"
   },
   {
-    "num": "19",
+    "num": 20,
     "nombre": "Marimba",
     "nombre_dos": "",
     "clave": "Sol",
@@ -284,7 +284,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045821_f67a4e7598_m.jpg"
   },
   {
-    "num": "20",
+    "num": 21,
     "nombre": "Gong",
     "nombre_dos": "",
     "clave": "n/a",
@@ -298,7 +298,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045821_f67a4e7598_m.jpg"
   },
   {
-    "num": "21",
+    "num": 22,
     "nombre": "Caja",
     "nombre_dos": "Redoblante",
     "clave": "n/a",
@@ -312,7 +312,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045821_f67a4e7598_m.jpg"
   },
   {
-    "num": "22",
+    "num": 1,
     "nombre": "Director",
     "nombre_dos": "",
     "clave": "n/a",
@@ -327,7 +327,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50811045871_f8d081d8f9_m.jpg"
   },
   {
-    "num": "23",
+    "num": 23,
     "nombre": "Arpa",
     "nombre_dos": "",
     "clave": "sol",
@@ -342,7 +342,7 @@ export default {
     "posicion": "https://live.staticflickr.com/65535/50810423733_20bb7cd517_m.jpg"
   },
   {
-    "num": "24",
+    "num": 24,
     "nombre": "Piano",
     "nombre_dos": "",
     "clave": "sol",

@@ -29,6 +29,11 @@
               <!--las clves vienen desde js por el array-->
             </select>
           </li> 
+          <li class="filtro-clave">
+            <select name="clave" id="order">
+              <!--El orden desde js por el array-->
+            </select>
+          </li>
           <li class="home-btn">
             <a href="#home">
               <i class="fas fa-home" id="btnHome"></i>
@@ -41,39 +46,39 @@
     <div class="navigation">
       <ul>
         <li>
-          <a href="#" id="todos">
-            <span class="icon"><i class="fas fa-music" ></i></span>
-            <span class="title">Todas las familias</span>
+          <a href="#" class="todos">
+            <span class="icon"><i class="fas fa-music" name="todos"></i></span>
+            <span class="title todos" name="todos">Todas las familias</span>
           </a>
         </li>
         <li>
-          <a href="#" id="cuerdas">
-            <span class="icon"><i class="iconOrqviolin"></i></span>
-            <span class="title">Cuerdas</span>
+          <a href="#" class="cuerdas">
+            <span class="icon"><i class="iconOrqviolin" name="cuerdas"></i></span>
+            <span class="title cuerdas" name="cuerdas">Cuerdas</span>
           </a>
         </li>
         <li>
           <a href="#" id="vientos madera">
-            <span class="icon"><i class="iconOrqclarinet"></i></span>
-            <span class="title">Viento Madera</span>
+            <span class="icon"><i class="iconOrqclarinet" name="vientos madera"></i></span>
+            <span class="title" name="vientos madera">Viento Madera</span>
           </a>
         </li>
         <li>
-          <a href="#" id="vientos metal">
-            <span class="icon"><i class="iconOrqtrumpet"></i></span>
-            <span class="title">Viento Metal</span>
+          <a href="#" class="vientos metal">
+            <span class="icon"><i class="iconOrqtrumpet" name="vientos metal"></i></span>
+            <span class="title vientos metal" name="vientos metal">Viento Metal</span>
           </a>
         </li>
         <li>
-          <a href="#" id="percusion">
-            <span class="icon"><i class="iconOrqtambor"></i></span>
-            <span class="title">Percusión</span>
+          <a href="#" class="percusion">
+            <span class="icon"><i class="iconOrqtambor" name="percusion"></i></span>
+            <span class="title percusion" name="percusion">Percusión</span>
           </a>
         </li>
         <li>
-          <a href="#" id="solista">
-            <span class="icon"><i class="iconOrqpiano-de-cola" ></i></span>
-            <span class="title">Solista</span>
+          <a href="#" class="solista">
+            <span class="icon"><i class="iconOrqpiano-de-cola" name="solista"></i></span>
+            <span class="title solista" name="solista">Solista</span>
           </a>
         </li>
       </ul>
@@ -107,6 +112,9 @@
           </div>
         </div>
         <div class="div-izquierda">
+          <a href="#" id="btnClosed">
+            <i class="fas fa-times"></i>
+          </a>
           <div class="titulo">
             <h1 id="card-title" class="title"></h1>
             <p id="titleTwo" class="text"></p>
@@ -114,18 +122,18 @@
           <div class="datos">
             <p class="text">
               Familia: <span id="family" class="text"></span>
-              Clave principal de lectura:  <span id="clef" class="text"></span>
-              <p id="secondClef" class="text"></p>
-              <p id="caracteristica" class="text"></p>
-              <p class="text">
+            </p>
+            <p class="text">
+              Clave principal de lectura: <span id="clef" class="text"></span>
+            </p>
+            <p id="secondClef" class="text"></p>
+            <p id="caracteristica" class="text"></p>
+            <p class="text">
               Dato: <span id="dato" class="text"></span>
               Relacionado con: <span span id="relacion" class="text"></span></p>
             </p>
           </div>
         </div>
-        <a href="#" id="btnClosed">
-          <i class="fas fa-times"></i>
-        </a>
       </section>
     </main>
     <!--FOOOTER

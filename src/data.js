@@ -1,7 +1,7 @@
 import orquesta from "./data/orquesta/orquesta.js";
 
 const orchestra = orquesta.orquesta;
-console.log("MIRAAA-->", orchestra);
+//console.log("MIRAAA-->", orchestra);
 
 //Nombre e imagen de instrumento por clave
 export const filterClave = (clv) => {
@@ -48,4 +48,45 @@ export const selectInstrument = (instrument) => {
   return findInstrument
 };
 
+export const orderByNum = (orchestra) => {
+  return orchestra.sort(function(prev, next) {
+    if (prev.num > next.num){
+      return 1;
+    }
+    else if(prev.num < next.num){
+      return -1
+    }
+    return prev.num - next.num
+  });
+}
+
+export const orderAtoZ = (orchestra) => {
+  return orchestra.sort(function(prev, next) {
+    if (prev.nombre > next.nombre){
+      return 1;
+    }
+    else if(prev.nombre < next.nombre){
+      return -1
+    }
+    return 0
+  });
+}
+
+export const orderZtoA = (orchestra) => {
+  return orchestra.sort(function(prev, next) {
+    if (prev.nombre < next.nombre){
+      return 1;
+    }
+    else if(prev.nombre > next.nombre){
+      return -1
+    }
+    return 0
+  });
+}
+
+export const orderRandom = (orchestra) => {
+  return orchestra.sort(function(){
+    0.5-Math.random();
+  })
+}
 

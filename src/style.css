@@ -14,16 +14,17 @@ body{
 
 /*HEADER*/
 header{
+    background-color: #867666;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 6rem;
+    height: 8rem;
 }
 
 .nav-items{
-    background-color: #867666;
     text-align: center;
+    height: 8rem;
 }
 nav{
     border-left: none;
@@ -31,6 +32,7 @@ nav{
     display: inline-flex;
     color: #fff;
     list-style: none;
+    margin-top: 1rem;
 }
 .nav-items nav li{
     margin: 1.5rem;
@@ -67,10 +69,9 @@ nav{
 nav .search{
     position: relative;
     display: flex;
-    height: 3rem;
+    height: 4rem;
     width: 60rem;
-    line-height: 3;
-    overflow: hidden;
+    line-height: 4;
 }
 nav .search input{
     appearance: none;
@@ -80,7 +81,7 @@ nav .search input{
     border-radius: 0.5rem;
     background: #eae2d6;
     background-image: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     flex: 1;
     padding: 0.9rem 1rem 0.9rem 7.2rem;
     color:#867666;
@@ -100,7 +101,7 @@ nav .btn{
 nav .btn i{
     text-decoration: none;
     color: #eae2d6;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }    
 /*LI select */
 nav .filtro-clave select{
@@ -122,10 +123,10 @@ nav .filtro-clave select::-ms-expand{
 nav .filtro-clave{
     position: relative;
     display: flex;
-    height: 3rem;
+    height: 4rem;
     width: 20rem;
     left: 10rem;
-    line-height: 3;
+    line-height: 4;
     overflow: hidden;
     border-radius: 0.5rem;
 } 
@@ -154,7 +155,7 @@ nav .home-btn i{
     text-decoration: none;
     color: #eae2d6;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 4rem;
     transition: 0.5s;
     transition-property: color;
 }
@@ -224,6 +225,7 @@ nav .home-btn:hover{
 /*Section Home*/
 main{
     background-color: #d5c3aa;
+    height: 100vh;
 }
 .home{
     margin-left: 6rem;
@@ -243,11 +245,7 @@ main{
 .home .text-home{
     display: block;
     color: #fff;
-    width: 80%;
-    height: 22rem;
-    padding-right: 0;
-    padding-left: 21rem;
-    padding-top: 23rem;
+    padding: 27rem;
 }
 .home .text-home h2{
     font-size: 2rem;
@@ -264,7 +262,7 @@ main{
 /*Cuadrícula de instrumentos*/
 .item{
     margin-left: 25rem;
-    margin-right: 21rem;
+    margin-right: 15rem;
     margin-top: 10rem;
     height: 100vh;
 }
@@ -281,39 +279,44 @@ main{
 .item .div-galery .image-mini{
     border-radius: 2rem;
     margin-left: 3rem;
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
 }
+
 .item .div-galery .image-mini:hover {
 	box-shadow: 3px 0px 30px #867666;
 }
 .item .name-instrument{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    padding-top: 1rem;
 }
 /*ficha de instrumento*/
 .modalInstrument{
     background-color: #eae2d6;
-    margin-top: 8rem;
-    margin-left: 26rem;
-    margin-right: 29rem;
-    height: 64rem;
-    border-radius: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-left: 50rem;
+    margin-right: 50rem;
+    margin-top: 11rem;
+    border-radius: 2rem;
+    height: auto;
 }
 .modalInstrument a{
     color: #867666;
     font-size: 2rem;
-    margin-right: 2rem;
+    margin-left: 30rem;
     margin-top: 1rem;
     cursor: pointer;
 }
 .modalInstrument .div-derecha{
-    width: 50%;
-    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 10% 40%;
+    grid-gap: 1rem;
+    align-items: center;
 }
 .modalInstrument .div-derecha .imgInstrument{
-    margin-left: 2rem;
-    margin-top: 2rem;
+    margin-left: 3rem;
     border-radius: 1rem;
 }
 .modalInstrument .div-derecha audio{
@@ -323,38 +326,38 @@ main{
     box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
 .modalInstrument .div-derecha .img-position .text{
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     margin-left: 3rem;
 }
 .modalInstrument .div-derecha .img-position img{
     margin-left: 8rem;
-    width: 180px;
-    height: 145px;
+    width: 190px;
+    height: 155px;
     border-radius: 1rem;
 }
 
 .modalInstrument .div-izquierda{
-    width: 50%;
-    height: 100%;
+    display: grid;
+    grid-template-rows: 4% 6% 90%;
+    grid-gap: 1rem;
+    align-items: center;
 }
 .modalInstrument .div-izquierda .titulo{
-    margin-top: 1rem;
-    margin-left: 2rem;
-    display: flex;
+    align-items: center;
 }
 .modalInstrument .div-izquierda .titulo .title{
     font-size: 4rem;
-    width: 60%;
+    width: 30%;
 }
 .modalInstrument .div-izquierda .titulo .text{
     font-size: 1.8rem;
-    margin-top: 2rem;
-    width: 40%;
 }
 .modalInstrument .div-izquierda .datos{
-    width: 31rem;
-    margin-left: 2rem;
-    height: 50rem;
+    width: 32rem;
+    padding: 0;
+    margin-top: -3rem;
+    line-height: 3rem;
+    height: auto;
 }
 .modalInstrument .div-izquierda .datos .text{
     font-size: 1.6rem;
