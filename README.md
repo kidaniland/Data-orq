@@ -1,3 +1,5 @@
+![javascript](https://img.icons8.com/color/48/000000/javascript.png) ![HTML](https://img.icons8.com/color/48/000000/html-5--v1.png) ![CSS](https://img.icons8.com/color/48/000000/css3.png)
+
 # Data Orq
 
 ## 1. Objetivos de aprendizaje
