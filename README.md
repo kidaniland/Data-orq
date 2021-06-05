@@ -4,7 +4,7 @@
 
 ## 1. Objetivos de aprendizaje
 
-El objetivo principal de este proyecto es que aprender a diseñar y construir una
+El objetivo principal de este proyecto esz aprender a diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data mediante filtros, entendiendo lo que el
 usuario necesita.
 
